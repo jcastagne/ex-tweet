@@ -6,9 +6,12 @@ defmodule ExTweet.Application do
   use Application
 
   def start(_type, _args) do
+    import Supervisor.Spec, warn: false
+
     children = [
       # Starts a worker by calling: ExTweet.Worker.start_link(arg)
       # {ExTweet.Worker, arg}
+      worker(ExTweet.Scheduler, [])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
