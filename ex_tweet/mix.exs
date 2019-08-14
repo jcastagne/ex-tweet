@@ -23,9 +23,10 @@ defmodule ExTweet.MixProject do
   defp deps do
     [
       {:credo, "~> 1.1"},
-      {:quantum, "~> 2.3"}
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:quantum, "~> 2.3"},
+      {:extwitter, "~> 0.9.5"},
+      {:oauther, "~> 1.1"},
+      {:poison, "~> 3.0"}
     ]
   end
 end
