@@ -11,6 +11,7 @@ defmodule ExTweet.Application do
     children = [
       # Starts a worker by calling: ExTweet.Worker.start_link(arg)
       # {ExTweet.Worker, arg}
+      worker(ExTweet.TweetServer, []),
       worker(ExTweet.Scheduler, [])
     ]
 
