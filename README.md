@@ -17,6 +17,17 @@ Here is another tweet
 ### Adjusting the Schedule
 
 You can set the desired schedule in the [config](ex_tweet/config/config.exs) file.
+
+```
+jobs: [
+        # Every Day
+        {"@daily", your_job},
+        # Every Minute
+        {"* * * * *", your_job}
+    ]
+```
+
+
 Schedule must be set in a [Cron](https://crontab.guru) way
 
 ## Built With
