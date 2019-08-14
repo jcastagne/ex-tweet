@@ -1,7 +1,9 @@
 defmodule ExTweet.TweetServer do
+    @moduledoc false
+
     use GenServer
 
-    def start_link() do
+    def start_link do
         GenServer.start_link(__MODULE__, :ok, name: :tweet_server)
     end
 
@@ -10,7 +12,7 @@ defmodule ExTweet.TweetServer do
     end
 
     def handle_cast({:tweet, tweet}, _) do
-        ExTweet.Tweet.send(tweet)
+        ExTweet.SendTweet.send(tweet)
         {:noreply, %{}}
     end
 

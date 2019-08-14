@@ -1,4 +1,8 @@
-defmodule ExTweet.Tweet do
+defmodule ExTweet.SendTweet do
+    @moduledoc """
+    Authenticates to Twitter app and send tweets.
+    """
+
     def send(str) do
         ExTwitter.configure(
             consumer_key: System.get_env("TWITTER_CONSUMER_KEY"),

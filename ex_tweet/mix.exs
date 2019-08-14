@@ -26,7 +26,11 @@ defmodule ExTweet.MixProject do
       {:quantum, "~> 2.3"},
       {:extwitter, "~> 0.9.5"},
       {:oauther, "~> 1.1"},
-      {:poison, "~> 3.0"}
+      {:poison, "~> 3.0"},
+      {:mock, "~> 0.3.3"},
+      {:meck, "~> 0.8.13"},
+      {:mix_test_watch, "~> 0.9.0"},
+      {:file_system, "~> 0.2.7"}
     ]
   end
 end
