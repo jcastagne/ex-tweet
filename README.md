@@ -1,21 +1,29 @@
 # ExTweet
 
-**TODO: Add description**
+Simple training application that sends random tweets taken from a txt file on a specified schedule
 
-## Installation
+## Usage
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `ex_tweet` to your list of dependencies in `mix.exs`:
+### Setting up Tweet Pool
 
-```elixir
-def deps do
-  [
-    {:ex_tweet, "~> 0.1.0"}
-  ]
-end
+Paste strings in the [pool](ex_tweet/priv/tweets.txt) file.
+Each line will correspond to a tweet
+
+```
+This is some tweet
+Here is another tweet
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/ex_tweet](https://hexdocs.pm/ex_tweet).
+### Adjusting the Schedule
 
+You can set the desired schedule in the [config](ex_tweet/config/config.exs) file.
+Schedule must be set in a [Cron](https://crontab.guru) way
+
+## Built With
+* [Quantum](https://hex.pm/packages/quantum) - Task scheduler
+* [Extwitter](https://hex.pm/packages/extwitter) - Twitter client library for elixir
+* [Mock](https://hex.pm/packages/mock) - A mocking libary for the Elixir language.
+* [Mix Test Watch](https://hex.pm/packages/mix_test_watch) - Automatically run tests when files change
+
+## License
+[MIT](LICENSE) @jcastagne
