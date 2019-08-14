@@ -3,7 +3,7 @@ import Config
 config :ex_tweet, ExTweet.Scheduler,
     jobs: [
         # Every Minute
-        {"* * * * *", fn -> IO.puts ExTweet.FileReader.get_strings_to_tweet("res/sample.txt") end}
+        {"* * * * *", fn -> IO.puts ExTweet.FileReader.get_strings_to_tweet("res/twets.txt") end}
     ]
 
 config :logger,

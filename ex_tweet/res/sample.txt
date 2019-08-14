@@ -1,4 +1,0 @@
-Some content to read
-Some string on second line
-Some long string of more than 140 caracters to test correct filtering is applied Some long string of more than 140 caracters to test correct filtering is applied
-Some third line
